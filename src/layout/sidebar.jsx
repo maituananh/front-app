@@ -1,9 +1,10 @@
-import "../css/sidebar.css";
+import styles from "../css/Sidebar.module.css";
+import cx from "classnames";
 
 function Sidebar({ children }) {
   return (
-    <div className="container">
-      <aside className="sidebar">
+    <div className={cx(styles.container)}>
+      <aside className={cx(styles.sidebar)}>
         <h2>List Items </h2>
         <ul>
           <li>Motorbike</li>
