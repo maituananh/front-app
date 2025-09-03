@@ -1,8 +1,10 @@
 import Layout from "../layout/layout";
 import Home from "../pages/home";
 import Login from "../pages/login";
-import User from "../pages/User";
-import Import from "../pages/Import";
+import User from "../pages/user";
+import Import from "../pages/import";
+import AddUser from "../pages/addUser"
+import NotFound from "../pages/not-found";
 
 export const routes = [
     {
@@ -26,15 +28,18 @@ export const routes = [
         layout: Layout
     },
     {
-        path: "*",
-        element: NotFound,
-        path: "/user",
-        element: User,
-        layout: Layout
-    },
-    {
         path: "/import",
         element: Import,
         layout: Layout
-    }
+    },
+    {
+        path: "/addUser",
+        element: AddUser,
+        layout: Layout
+    },
+
+    {
+        path: "*",
+        element: NotFound,
+    },
 ];

@@ -1,0 +1,50 @@
+.newPersonContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 50px auto;
+  width: 80%;
+  gap: 40px;
+}
+
+.avatar img {
+  width: 120px;
+}
+
+.personForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 600px;
+}
+
+.personForm input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  outline: none;
+  font-size: 14px;
+}
+
+.formActions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.formActions button {
+  padding: 5px 20px;
+  border: 1px solid green;
+  border-radius: 20px;
+  background: white;
+  color: green;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.formActions button:hover {
+  background: green;
+  color: white;
+}
