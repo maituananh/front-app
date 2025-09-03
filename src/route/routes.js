@@ -26,6 +26,13 @@ export const routes = [
         layout: Layout
     },
     {
+        path: "*",
+        element: NotFound,
+        path: "/user",
+        element: User,
+        layout: Layout
+    },
+    {
         path: "/import",
         element: Import,
         layout: Layout
