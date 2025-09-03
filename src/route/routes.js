@@ -1,7 +1,8 @@
 import Layout from "../layout/layout";
 import Home from "../pages/home";
 import Login from "../pages/login";
-import NotFound from "../pages/not-found";
+import User from "../pages/User";
+import Import from "../pages/Import";
 
 export const routes = [
     {
@@ -20,8 +21,13 @@ export const routes = [
         layout: null
     },
     {
-        path: "*",
-        element: NotFound,
+        path: "/user",
+        element: User,
         layout: Layout
     },
+    {
+        path: "/import",
+        element: Import,
+        layout: null
+    }
 ];
