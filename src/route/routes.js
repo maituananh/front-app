@@ -28,6 +28,6 @@ export const routes = [
     {
         path: "/import",
         element: Import,
-        layout: null
+        layout: Layout
     }
 ];

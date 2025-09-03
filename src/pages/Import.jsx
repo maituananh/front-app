@@ -1,54 +1,23 @@
-import React from "react";
-import "../css/import.css";
+
+import styles from "../css/Import.module.css";
+import cx from "classnames";
 
 export default function User() {
   return (
     <div>
-      <header>
-        <div className="logo">🍀 Pawn Service</div>
-        <div className="search-bar">
-          <input type="text" placeholder="Search.........." />
-          <button>Search</button>
-        </div>
-      </header>
-
-      <nav>
-        <div className="menu">
-          <a href="#">Home</a>
-          <a href="#">New Person</a>
-          <a href="#">Pledged Items</a>
-          <a href="#">Liquidated Items</a>
-          <a href="#">Service Information</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div className="phone">📞 xxx-xxxx-xxx</div>
-      </nav>
-
-      <main className="container">
-        <aside className="sidebar">
-          <h3>Manage</h3>
-          <ul>
-            <li><a href="#">Admin</a></li>
-            <li><a href="#">Order History</a></li>
-            <li><a href="#">Notification</a></li>
-            <li><a href="#">Product Liquidation</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Log-out</a></li>
-          </ul>
-        </aside>
-
-        <section className="content">
-          <div className="content-header">
+      <main className={cx(styles.container)}>
+        <section className={cx(styles.content)}>
+          <div className={cx(styles["content-header"])}>
             <h2>Users Management</h2>
-            <div className="actions">
+            <div className={cx(styles.actions)}>
               <input type="text" placeholder="Search Users" />
-              <button className="btn green">Search</button>
-              <button className="btn">Import</button>
-              <button className="btn outline">New Users</button>
+              <button className={cx(styles.btn, styles.green)}>Search</button>
+              <button className={cx(styles.btn)}>Import</button>
+              <button className={cx(styles.btn, styles.outline)}>New Users</button>
             </div>
           </div>
 
-          <table>
+          <table className={cx(styles.table)}>
             <thead>
               <tr>
                 <th>ID</th>
@@ -83,60 +52,6 @@ export default function User() {
                 <td>5-1-1</td>
                 <td>14 Million VND</td>
                 <td>4 Days</td>
-              </tr>
-            </tbody>
-
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Age</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-              </tr>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Holding Date</th>
-                <th>Pick Up Date</th>
-                <th>Price</th>
-                <th>Expired On</th>
-              </tr>
-              <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-              </tr>
-            </tbody>
-
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Age</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-              </tr>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Holding Date</th>
-                <th>Pick Up Date</th>
-                <th>Price</th>
-                <th>Expired On</th>
-              </tr>
-              <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
               </tr>
             </tbody>
           </table>
