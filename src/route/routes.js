@@ -3,7 +3,7 @@ import Home from "../pages/home";
 import Login from "../pages/login";
 import User from "../pages/user";
 import Import from "../pages/import";
-import AddUser from "../pages/addUser"
+import AddUser from "../pages/add-user"
 import NotFound from "../pages/not-found";
 
 export const routes = [
@@ -37,7 +37,6 @@ export const routes = [
         element: AddUser,
         layout: Layout
     },
-
     {
         path: "*",
         element: NotFound,
