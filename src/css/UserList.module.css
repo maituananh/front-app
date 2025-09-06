@@ -1,4 +1,5 @@
 .container {
+    width: calc(100% - 200px);
     display: flex;
 }
 
@@ -35,21 +36,20 @@
     color: #33cc33;
 }
 
-table {
+.user-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    table-layout: fixed;
 }
 
-table th,
-table td {
+.user-table th,
+.user-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
     word-wrap: break-word;
 }
 
-table th {
+.user-table th {
     background: #d1d1d1;
 }

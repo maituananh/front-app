@@ -1,10 +1,10 @@
 
-import styles from "../css/Import.module.css";
+import styles from "../css/UserList.module.css";
 import cx from "classnames";
 
-export default function User() {
+export default function UserList() {
   return (
-    <div>
+    <>
       <main className={cx(styles.container)}>
         <section className={cx(styles.content)}>
           <div className={cx(styles["content-header"])}>
@@ -17,7 +17,7 @@ export default function User() {
             </div>
           </div>
 
-          <table className={cx(styles.table)}>
+          <table className={cx(styles["user-table"])}>
             <thead>
               <tr>
                 <th>ID</th>
@@ -57,6 +57,6 @@ export default function User() {
           </table>
         </section>
       </main>
-    </div>
+    </>
   );
 }

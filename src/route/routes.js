@@ -2,9 +2,9 @@ import Layout from "../layout/layout";
 import Home from "../pages/home";
 import Login from "../pages/login";
 import User from "../pages/user";
-import Import from "../pages/import";
 import AddUser from "../pages/add-user"
 import NotFound from "../pages/not-found";
+import UserList from "../pages/user-list";
 
 export const routes = [
     {
@@ -28,8 +28,8 @@ export const routes = [
         layout: Layout
     },
     {
-        path: "/import",
-        element: Import,
+        path: "/user-list",
+        element: UserList,
         layout: Layout
     },
     {
