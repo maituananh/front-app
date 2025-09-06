@@ -1,0 +1,55 @@
+.container {
+    width: calc(100% - 200px);
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions input {
+    padding: 5px;
+}
+
+.actions .btn {
+    margin-left: 5px;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.actions .btn.green {
+    background: #33cc33;
+    color: white;
+}
+
+.actions .btn.outline {
+    border: 1px solid #33cc33;
+    background: white;
+    color: #33cc33;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.user-table th {
+    background: #d1d1d1;
+}
