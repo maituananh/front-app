@@ -1,42 +1,46 @@
-import Layout from "../layout/layout";
-import Home from "../pages/home";
-import Login from "../pages/login";
-import User from "../pages/user";
-import AddUser from "../pages/add-user"
-import NotFound from "../pages/not-found";
-import UserList from "../pages/user-list";
-import { createBrowserRouter } from "react-router-dom";
-import { ProtectedRoute } from "../components/protectedRoute";
+import Layout from '../layout/layout';
+import Home from '../pages/home';
+import Login from '../pages/login';
+import User from '../pages/user';
+import AddUser from '../pages/add-user';
+import NotFound from '../pages/not-found';
+import UserList from '../pages/user-list';
+import { createBrowserRouter } from 'react-router-dom';
+import { ProtectedRoute } from '../components/protectedRoute';
 
 export const router = createBrowserRouter([
   {
-    path: "/login",
-    element: <Login />
+    path: '/login',
+    element: <Login />,
   },
   {
-    path: "/",
-    element: <ProtectedRoute> <Layout /> </ProtectedRoute>,
+    path: '/',
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       {
-        path: "",
+        path: 'home',
         element: <Home />,
       },
       {
-        path: "user",
+        path: 'user',
         element: <User />,
       },
       {
-        path: "add-user",
+        path: 'add-user',
         element: <AddUser />,
       },
       {
-        path: "users",
+        path: 'users',
         element: <UserList />,
       },
     ],
   },
   {
-    path: "*",
-    element: <NotFound />
-  }
+    path: '*',
+    element: <NotFound />,
+  },
 ]);
