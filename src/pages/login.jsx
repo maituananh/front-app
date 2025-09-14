@@ -3,9 +3,10 @@ import cx from 'classnames';
 import { useForm } from 'react-hook-form';
 import dataService from '../service/dataService';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { apis } from '../route/apis';
-import { useAuth } from '../hooks/useAuth';
+import { getCurrentUser } from '../utils/jwt-utils';
+import AuthContext from '../providers/authProvider';
 
 function Login() {
   const {
@@ -16,14 +17,13 @@ function Login() {
   } = useForm();
 
   const navigate = useNavigate();
-  const { setStateLogin } = useAuth();
+  const { user, setUser } = useContext(AuthContext);
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('accessToken')) {
-  // setStateLogin();
-  // navigate('/home');
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (user) {
+      navigate('/login');
+    }
+  }, []);
 
   const onSubmit = async (data) => {
     const token = await dataService.post(apis.auth.login, data);
@@ -31,7 +31,9 @@ function Login() {
     localStorage.setItem('accessToken', token.accessToken);
     localStorage.setItem('refreshToken', token.refreshToken);
 
-    setStateLogin({ user: token.user });
+    const currentUser = getCurrentUser();
+
+    setUser({ id: currentUser.sub, username: currentUser.sub });
 
     navigate('/home');
   };

@@ -1,15 +1,35 @@
-import { useState } from 'react';
-import { AuthContext } from '../context/authContext';
+import { createContext, useState } from 'react';
+import { getCurrentUser } from '../utils/jwt-utils';
+import { getTimeAfterFiveMinutes } from '../utils/date-utils';
+
+const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const currentUser = getCurrentUser();
 
-  const setStateLogin = (data) => setUser(data);
-  const setStateLogout = () => setUser(null);
+    if (!currentUser) {
+      return null;
+    }
+    console.log(
+      getTimeAfterFiveMinutes(new Date(currentUser.exp * 1000).getTime())
+    );
+    console.log(new Date());
+
+    return new Date() <
+      getTimeAfterFiveMinutes(new Date(currentUser.exp * 1000).getTime())
+      ? {
+          id: currentUser.sub,
+          username: currentUser.sub,
+        }
+      : null;
+  });
 
   return (
-    <AuthContext.Provider value={{ user, setStateLogin, setStateLogout }}>
+    <AuthContext.Provider value={{ user, setUser }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
+export default AuthContext;
