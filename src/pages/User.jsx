@@ -19,7 +19,7 @@ export default function User() {
               <button>Mobile Phone</button>
               <button>Gold</button>
               <button>History</button>
-            </div>
+            </div> 
           </div>
 
           <div className={cx(styles.items)}>

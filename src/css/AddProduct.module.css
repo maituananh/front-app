@@ -1,0 +1,83 @@
+.pageContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  align-items: start;
+}
+
+.customerSection h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.customerBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.customerBox img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.customerInfo p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.productSection {
+  text-align: center;
+}
+
+.titleFade {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.productSection img {
+  max-width: 100%;
+  height: auto;
+}
+
+.infoSection h3 {
+  font-size: 18px;
+  margin-bottom: 15 px;
+}
+
+.infoSection p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.btnGroup {
+  margin-top: 40px;
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+}
+
+.add {
+  background: green;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+.prev {
+  background: white;
+  color: green;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid green;
+  cursor: pointer;
+}
