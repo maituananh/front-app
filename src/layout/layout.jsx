@@ -1,8 +1,9 @@
 import styles from "../css/Layout.module.css";
 import cx from "classnames";
 import Sidebar from "./sidebar";
+import { Outlet } from "react-router-dom";
 
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <header>
@@ -26,7 +27,7 @@ function Layout({ children }) {
       </nav>
 
       <Sidebar>
-        {children}
+        <Outlet />
       </Sidebar>
     </>
   );
