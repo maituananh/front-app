@@ -1,18 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import NotFound from './pages/not-found'
-import Home from './pages/home'
+import { routes } from './route/routes'
 
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" /*element={<Layout />}*/>
-          <Route index element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
+        {
+          routes.map(route => {
+            const Layout = route.layout
+            const Page = route.element
+            const element = Layout ? <Layout> <Page/> </Layout> : <Page/>
+
+            return (
+              <Route key={route.path} path={route.path} element={element} />
+            )
+          })
+        }
       </Routes>
     </BrowserRouter>
   )
