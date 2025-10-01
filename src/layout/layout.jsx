@@ -1,7 +1,7 @@
 import styles from "../css/Layout.module.css";
 import cx from "classnames";
 import Sidebar from "./sidebar";
-import { Outlet } from "react-router-dom";
+import {Link, Outlet } from "react-router-dom";
 
 function Layout() {
   return (
@@ -17,7 +17,7 @@ function Layout() {
       <nav>
         <div className={cx(styles.menu)}>
           <a href="#">Home</a>
-          <a href="#">New Person</a>
+          <Link to="/add-user">New Person</Link>
           <a href="#">Pledged Items</a>
           <a href="#">Liquidated Items</a>
           <a href="#">Service Information</a>
