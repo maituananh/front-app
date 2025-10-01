@@ -1,28 +1,32 @@
 .container {
-    display: flex;
+  display: flex;
+  margin: 0;
+  height: calc(100vh - 102px);
 }
 
 .sidebar {
-    width: 200px;
-    padding: 20px;
-    border-right: 1px solid #ddd;
+  max-width: 200px;
+  min-width: 200px;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .sidebar ul li:hover {
-    background: #eee;
+  background: #eee;
 }
 
 .content {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }

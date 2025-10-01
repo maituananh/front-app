@@ -1,46 +1,66 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: green;
+  font-size: 22px;
+  font-weight: bold;
+  color: green;
 }
 
 .search-bar input {
-    padding: 7px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 7px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .search-bar button {
-    padding: 8px 15px;
-    border: none;
-    background: green;
-    color: #fff;
-    border-radius: 4px;
-    margin-left: 5px;
-    cursor: pointer;
+  padding: 8px 15px;
+  border: none;
+  background: green;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 nav {
-    background: #333;
-    color: #fff;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #333;
+  color: #fff;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
+.menu {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  border-right: #fff 1px solid;
+  margin-right: 15px;
+  padding-right: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }

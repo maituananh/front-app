@@ -1,9 +1,10 @@
-import api from './api';
+import api from '../service/api';
 import dataService from '../service/dataService';
 
 api.interceptors.request.use(
   (config) => {
     const accessToken = localStorage.getItem('accessToken');
+    console.log('Interceptor token:', accessToken);
     if (accessToken) {
       config.headers['Authorization'] = `Bearer ${accessToken}`;
     }

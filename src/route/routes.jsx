@@ -2,11 +2,13 @@ import Layout from '../layout/layout';
 import Home from '../pages/home';
 import Login from '../pages/login';
 import User from '../pages/user';
-import AddUser from '../pages/add-user';
+import AddUser from '../pages/new-user';
 import NotFound from '../pages/not-found';
 import UserList from '../pages/user-list';
 import { createBrowserRouter } from 'react-router-dom';
 import { ProtectedRoute } from '../components/protectedRoute';
+import NewProductForm from '../pages/new-product';
+import NewUserForm from '../pages/new-user';
 
 export const router = createBrowserRouter([
   {
@@ -30,12 +32,16 @@ export const router = createBrowserRouter([
         element: <User />,
       },
       {
-        path: 'add-user',
-        element: <AddUser />,
+        path: 'new-user',
+        element: <NewUserForm />,
       },
       {
         path: 'users',
         element: <UserList />,
+      },
+      {
+        path: 'new-product',
+        element: <NewProductForm />,
       },
     ],
   },
