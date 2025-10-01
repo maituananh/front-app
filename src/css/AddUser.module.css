@@ -28,12 +28,8 @@
 }
 
 .formActions {
-  display: flex;
   gap: 15px;
   margin-top: 10px;
-}
-
-.formActions button {
   padding: 5px 20px;
   border: 1px solid green;
   border-radius: 20px;
@@ -44,7 +40,3 @@
   transition: 0.2s;
 }
 
-.formActions button:hover {
-  background: green;
-  color: white;
-}

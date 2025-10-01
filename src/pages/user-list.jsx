@@ -24,7 +24,6 @@ export default function UserList() {
             <div className={cx(styles.actions)}>
               <input type="text" placeholder="Search Users" />
               <button className={cx(styles.btn, styles.green)}>Search</button>
-              <button className={cx(styles.btn)}>Import</button>
               <button className={cx(styles.btn, styles.outline)}>
                 New Users
               </button>
