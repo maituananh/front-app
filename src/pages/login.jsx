@@ -26,6 +26,8 @@ function Login() {
   }, []);
 
   const onSubmit = async (data) => {
+    localStorage.clear();
+
     const token = await dataService.post(apis.auth.login, data);
 
     localStorage.setItem('accessToken', token.accessToken);
