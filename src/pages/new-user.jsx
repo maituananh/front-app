@@ -11,8 +11,6 @@ export default function NewUserForm() {
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log(12312312312321);
-
     await dataService.post(apis.user.addUser, data);
 
     navigate('/users');
